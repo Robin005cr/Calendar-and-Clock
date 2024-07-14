@@ -20,6 +20,18 @@ char subOptions(int operationNumber)
 		cout << "C. Count down timer" << endl;
 		cin >> ch;
 		break;
+	case 4:
+		cout << "A.  Calendar of year" << endl;
+		cout << "B. Day finder from date" << endl;
+		break;
+	case 5:
+		cout << "A. Sign up for calendar" << endl;
+		cout << "B. Meeting scheduler" << endl;
+		cout << "C. Blocking for leaves and events" << endl;
+		cout << "D. Task reminder" << endl;
+		break;
+
+
 	}
 	return ch;
 }
