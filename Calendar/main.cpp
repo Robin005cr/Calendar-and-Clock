@@ -1,11 +1,12 @@
 #include<iostream>
 #include "state.hpp"
 #include "digital_clock.hpp"
+#include "calendar.hpp"
 using namespace std;
 
 char subOptions(int operationNumber)
 {
-	char ch;
+	char ch = '0';
 	switch (operationNumber)
 	{
 	case 1:
@@ -21,8 +22,10 @@ char subOptions(int operationNumber)
 		cin >> ch;
 		break;
 	case 4:
-		cout << "A.  Calendar of year" << endl;
-		cout << "B. Day finder from date" << endl;
+		cout << "A. Calendar of year" << endl;
+		cout << "B. Calendar of a particlar month" << endl;
+		cout << "C. Day finder from date" << endl;
+		cin >> ch;
 		break;
 	case 5:
 		cout << "A. Sign up for calendar" << endl;
@@ -75,6 +78,8 @@ int main()
 				break;
 			case (GENERAL_CALENDAR):
 				cout << "General Calendar" << endl;
+				option = subOptions(operationInput);
+				printCalendarYear(2018);
 				break;
 			case(CALENDAR_LOGIN):
 				cout << "Calendar login" << endl;

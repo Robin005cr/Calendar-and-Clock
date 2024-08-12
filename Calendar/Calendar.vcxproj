@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="calendar.cpp" />
     <ClCompile Include="digital_clock.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="timer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="calendar.hpp" />
     <ClInclude Include="digital_clock.hpp" />
     <ClInclude Include="state.hpp" />
   </ItemGroup>
