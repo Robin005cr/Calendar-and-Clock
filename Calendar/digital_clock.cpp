@@ -1,11 +1,27 @@
 #include<iostream>
 #include<Windows.h>
 #include<string>
+
+#include "digital_clock.hpp"
 using namespace std;
 
 int timeHour, timeMin, timeSec;
 string meridieum;
+void digitalClock_init(char option)
+{
+	switch (option)
+	{
+	case 'A':
+		normalTime();
+		break;
+	case 'B':
+		break;
+	case 'C':
+		railwayTimeConverter();
+		break;
 
+	}
+}
 void normalTime()
 {
 	cout << "Enter the Current time";

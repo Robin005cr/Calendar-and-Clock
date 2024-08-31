@@ -67,7 +67,7 @@ int main()
 			case (DIGITAL_CLOCK):
 				cout << "Digital clock" << endl;
 				option = subOptions(operationInput);
-				normalTime();
+				digitalClock_init(option);
 				break;
 			case (TIMER):
 				cout << "Timer" << endl;
