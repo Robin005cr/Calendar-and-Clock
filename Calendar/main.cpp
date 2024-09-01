@@ -33,8 +33,9 @@ char subOptions(int operationNumber)
 		cout << "C. Blocking for leaves and events" << endl;
 		cout << "D. Task reminder" << endl;
 		break;
-
-
+	default:
+		cout << "Invalid Option";
+		break;
 	}
 	return ch;
 }
@@ -79,7 +80,7 @@ int main()
 			case (GENERAL_CALENDAR):
 				cout << "General Calendar" << endl;
 				option = subOptions(operationInput);
-				printCalendarYear(2018);
+				calendar_init(option);
 				break;
 			case(CALENDAR_LOGIN):
 				cout << "Calendar login" << endl;

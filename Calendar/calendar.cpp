@@ -1,5 +1,37 @@
 #include<iostream>
 using namespace std;
+#include "calendar.hpp"
+
+// Driver Program to check above functions
+int getYear()
+{
+	int year;
+	cout << "Enter the year:";
+	cin >> year;
+	return year;
+}
+void calendar_init(char option)
+{
+	int year = getYear();
+	switch (option)
+	{
+	case 'A':
+	case 'a': 
+		printCalendarYear(year);
+		break;
+	case 'B':
+	case 'b':
+		break;
+	case 'C':
+	case 'c':
+		
+		break;
+	default:
+		cout << "Invalid Option\n";
+		break;
+
+	}
+}
 
 /*A Function that returns the index of the day
 of the date- day/month/year
@@ -131,7 +163,7 @@ int numberOfDays(int monthNumber, int year)
 // Function to print the calendar of the given year
 void printCalendarYear(int year)
 {
-	printf("		 Calendar - %d\n\n", year);
+	cout<<"		 Calendar - "<<year<<"\n\n";
 	int days;
 
 	// Index of the day from 0 to 6
@@ -145,16 +177,15 @@ void printCalendarYear(int year)
 		days = numberOfDays(i, year);
 
 		// Print the current month name
-		printf("\n ------------%s-------------\n",
-			getMonthName(i).c_str());
+		cout<<"\n ------------%s-------------\n"<<getMonthName(i).c_str()<<"\n";
 
 		// Print the columns
-		printf(" Sun Mon Tue Wed Thu Fri Sat\n");
+		cout<<"  Sun  Mon  Tue  Wed  Thu  Fri  Sat\n";
 
 		// Print appropriate spaces
 		int k;
 		for (k = 0; k < current; k++)
-			printf("	 ");
+			cout<<"	 ";
 
 		for (int j = 1; j <= days; j++)
 		{
@@ -163,12 +194,12 @@ void printCalendarYear(int year)
 			if (++k > 6)
 			{
 				k = 0;
-				printf("\n");
+				cout<<"\n";
 			}
 		}
 
 		if (k)
-			printf("\n");
+			cout<<"\n";
 
 		current = k;
 	}
@@ -176,10 +207,4 @@ void printCalendarYear(int year)
 	return;
 }
 
-// Driver Program to check above functions
-int getYear()
-{
-	int year;
-	cin >> year;
-	return year;
-}
+
