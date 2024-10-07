@@ -2,6 +2,7 @@
 #include "state.hpp"
 #include "digital_clock.hpp"
 #include "calendar.hpp"
+#include "timer.hpp"
 using namespace std;
 
 char subOptions(int operationNumber)
@@ -73,6 +74,7 @@ int main()
 			case (TIMER):
 				cout << "Timer" << endl;
 				option = subOptions(operationInput);
+				timer_init(option);
 				break;
 			case (ALARM):
 				cout << "Alarm" << endl;

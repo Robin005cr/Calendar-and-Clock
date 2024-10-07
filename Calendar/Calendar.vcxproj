@@ -136,6 +136,7 @@
     <ClInclude Include="calendar.hpp" />
     <ClInclude Include="digital_clock.hpp" />
     <ClInclude Include="state.hpp" />
+    <ClInclude Include="timer.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
