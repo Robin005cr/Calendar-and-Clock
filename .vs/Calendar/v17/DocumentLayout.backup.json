@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\Professional_repo\\Calendar AND clock\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4FDF8EF1-462F-49BB-8F30-0341B6CD28FC}|Calendar\\Calendar.vcxproj|C:\\Users\\ASUS\\Desktop\\Professional_repo\\Calendar AND clock\\Calendar\\calendar_login.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4FDF8EF1-462F-49BB-8F30-0341B6CD28FC}|Calendar\\Calendar.vcxproj|solutionrelative:Calendar\\calendar_login.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FDF8EF1-462F-49BB-8F30-0341B6CD28FC}|Calendar\\Calendar.vcxproj|C:\\Users\\ASUS\\Desktop\\Professional_repo\\Calendar AND clock\\Calendar\\calendar_login.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4FDF8EF1-462F-49BB-8F30-0341B6CD28FC}|Calendar\\Calendar.vcxproj|solutionrelative:Calendar\\calendar_login.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FDF8EF1-462F-49BB-8F30-0341B6CD28FC}|Calendar\\Calendar.vcxproj|C:\\Users\\ASUS\\Desktop\\Professional_repo\\Calendar AND clock\\Calendar\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4FDF8EF1-462F-49BB-8F30-0341B6CD28FC}|Calendar\\Calendar.vcxproj|solutionrelative:Calendar\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4FDF8EF1-462F-49BB-8F30-0341B6CD28FC}|Calendar\\Calendar.vcxproj|C:\\Users\\ASUS\\Desktop\\Professional_repo\\Calendar AND clock\\Calendar\\timer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4FDF8EF1-462F-49BB-8F30-0341B6CD28FC}|Calendar\\Calendar.vcxproj|solutionrelative:Calendar\\timer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4FDF8EF1-462F-49BB-8F30-0341B6CD28FC}|Calendar\\Calendar.vcxproj|C:\\Users\\ASUS\\Desktop\\Professional_repo\\Calendar AND clock\\Calendar\\digital_clock.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4FDF8EF1-462F-49BB-8F30-0341B6CD28FC}|Calendar\\Calendar.vcxproj|solutionrelative:Calendar\\digital_clock.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4FDF8EF1-462F-49BB-8F30-0341B6CD28FC}|Calendar\\Calendar.vcxproj|C:\\Users\\ASUS\\Desktop\\Professional_repo\\Calendar AND clock\\Calendar\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4FDF8EF1-462F-49BB-8F30-0341B6CD28FC}|Calendar\\Calendar.vcxproj|solutionrelative:Calendar\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4FDF8EF1-462F-49BB-8F30-0341B6CD28FC}|Calendar\\Calendar.vcxproj|C:\\Users\\ASUS\\Desktop\\Professional_repo\\Calendar AND clock\\Calendar\\calendar.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -42,7 +50,33 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "calendar_login.hpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Professional_repo\\Calendar AND clock\\Calendar\\calendar_login.hpp",
+              "RelativeDocumentMoniker": "Calendar\\calendar_login.hpp",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Professional_repo\\Calendar AND clock\\Calendar\\calendar_login.hpp",
+              "RelativeToolTip": "Calendar\\calendar_login.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-09T16:17:29.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "calendar_login.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Professional_repo\\Calendar AND clock\\Calendar\\calendar_login.cpp",
+              "RelativeDocumentMoniker": "Calendar\\calendar_login.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Professional_repo\\Calendar AND clock\\Calendar\\calendar_login.cpp",
+              "RelativeToolTip": "Calendar\\calendar_login.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-09T16:17:06.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "timer.hpp",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Professional_repo\\Calendar AND clock\\Calendar\\timer.hpp",
               "RelativeDocumentMoniker": "Calendar\\timer.hpp",
@@ -54,20 +88,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "timer.cpp",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Professional_repo\\Calendar AND clock\\Calendar\\timer.cpp",
               "RelativeDocumentMoniker": "Calendar\\timer.cpp",
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\Professional_repo\\Calendar AND clock\\Calendar\\timer.cpp",
               "RelativeToolTip": "Calendar\\timer.cpp",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAkwEQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-07T06:19:03.331Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-07T06:19:03.331Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "digital_clock.hpp",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Professional_repo\\Calendar AND clock\\Calendar\\digital_clock.hpp",
               "RelativeDocumentMoniker": "Calendar\\digital_clock.hpp",
@@ -79,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "calendar.hpp",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Professional_repo\\Calendar AND clock\\Calendar\\calendar.hpp",
               "RelativeDocumentMoniker": "Calendar\\calendar.hpp",
@@ -91,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "calendar.cpp",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Professional_repo\\Calendar AND clock\\Calendar\\calendar.cpp",
               "RelativeDocumentMoniker": "Calendar\\calendar.cpp",
@@ -109,13 +142,14 @@
               "RelativeDocumentMoniker": "Calendar\\main.cpp",
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\Professional_repo\\Calendar AND clock\\Calendar\\main.cpp",
               "RelativeToolTip": "Calendar\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-07-09T16:52:37.566Z"
+              "WhenOpened": "2024-07-09T16:52:37.566Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "digital_clock.cpp",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Professional_repo\\Calendar AND clock\\Calendar\\digital_clock.cpp",
               "RelativeDocumentMoniker": "Calendar\\digital_clock.cpp",
@@ -123,8 +157,7 @@
               "RelativeToolTip": "Calendar\\digital_clock.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-07-09T16:34:03.338Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-09T16:34:03.338Z"
             }
           ]
         }
