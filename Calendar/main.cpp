@@ -2,6 +2,7 @@
 #include "state.hpp"
 #include "digital_clock.hpp"
 #include "calendar.hpp"
+#include "calendar_login.hpp"
 #include "timer.hpp"
 using namespace std;
 
@@ -29,10 +30,11 @@ char subOptions(int operationNumber)
 		cin >> ch;
 		break;
 	case 5:
-		cout << "A. Sign up for calendar" << endl;
-		cout << "B. Meeting scheduler" << endl;
-		cout << "C. Blocking for leaves and events" << endl;
-		cout << "D. Task reminder" << endl;
+		//cout << "A. Sign up for calendar" << endl;
+		cout << "A. Meeting scheduler" << endl;
+		cout << "B. Blocking for leaves and events" << endl;
+		cout << "C. Task reminder" << endl;
+		cin >> ch;
 		break;
 	default:
 		cout << "Invalid Option";
@@ -86,6 +88,8 @@ int main()
 				break;
 			case(CALENDAR_LOGIN):
 				cout << "Calendar login" << endl;
+				option = subOptions(operationInput);
+				calendar_login_init(option);
 				break;
 			case(EXIT):
 				cout << "Exiting the application" << endl;

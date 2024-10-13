@@ -1,45 +1,175 @@
 #include <iostream>
 #include <string>
-
+#include <unordered_map>
+#include <functional>  // For std::hash
+#include <fstream>     // For file I/O
+#include "calendar_login.hpp"
 using namespace std;
 
-class CalendarApp {
+class CalendarApp 
+{
 private:
-    string username = "user"; // Predefined username
-    string password = "pass"; // Predefined password
+    unordered_map<string, size_t> users; // Stores usernames and hashed passwords
+    const string filename = "user_data.txt"; // File to store user data
+
+    size_t hashPassword(const string& password) 
+    {
+        // Hashing function for passwords
+        return hash<string>{}(password);
+    }
+
+    void saveUserData() 
+    {
+        ofstream file(filename);
+        if (file.is_open()) 
+        {
+            for (const auto& user : users) 
+            {
+                file << user.first << " " << user.second << endl;
+            }
+            file.close();
+        }
+        else 
+        {
+            cout << "Error: Unable to save user data." << endl;
+        }
+    }
+
+    void loadUserData() 
+    {
+        ifstream file(filename);
+        if (file.is_open()) 
+        {
+            string username;
+            size_t hashedPassword;
+            while (file >> username >> hashedPassword) 
+            {
+                users[username] = hashedPassword;
+            }
+            file.close();
+        }
+        else 
+        {
+            cout << "No previous user data found. Starting fresh." << endl;
+        }
+    }
 
 public:
-    bool login(const string& inputUsername, const string& inputPassword) {
-        return (inputUsername == username && inputPassword == password);
+    CalendarApp() 
+    {
+        loadUserData(); // Load user data when the app starts
     }
 
-    void displayCalendar() {
+    ~CalendarApp() 
+    {
+        saveUserData(); // Save user data when the app closes
+    }
+
+    bool registerUser(const string& newUsername, const string& newPassword) 
+    {
+        if (users.find(newUsername) != users.end()) 
+        {
+            cout << "Username already exists. Please choose another one." << endl;
+            return false;
+        }
+        users[newUsername] = hashPassword(newPassword);
+        cout << "User registered successfully!" << endl;
+        saveUserData(); // Save after registration
+        return true;
+    }
+
+    bool login(const string& inputUsername, const string& inputPassword) 
+    {
+        auto it = users.find(inputUsername);
+        if (it != users.end() && it->second == hashPassword(inputPassword)) 
+        {
+            return true; // Successful login
+        }
+        return false; // Invalid username or password
+    }
+
+    void displayCalendar() 
+    {
         cout << "Welcome to your calendar!" << endl;
-        // Here you could implement more features related to the calendar.
+        // More calendar features could be added here
     }
 };
+void calendar_login_init(char option)
+{
+    signUpLogIN();
+    switch (option)
+    {
+    case 'A':
+    case 'a':
+        //signUpLogIN();
+        break;
+    case 'B':
+    case 'b':
+        //railwayTime();
+        break;
+    case 'C':
+    case 'c':
+        // railwayTimeConverter();
+        break;
+    default:
+        cout << "Invalid Option\n";
+        break;
 
-void calendar_login_init() {
+    }
+}
+
+void signUpLogIN() 
+{
     CalendarApp app;
     string inputUsername, inputPassword;
+    int choice;
 
     cout << "Welcome to the Calendar Application!" << endl;
 
-    // Prompt for username
-    cout << "Enter username: ";
-    getline(cin, inputUsername);
+    while (true) 
+    {
+        cout << "1. Register\n2. Login\n3. Exit\nChoose an option: ";
+        cin >> choice;
 
-    // Prompt for password
-    cout << "Enter password: ";
-    getline(cin, inputPassword);
+        if (choice == 1) 
+        {
+            // Registration process
+            cout << "Enter new username: ";
+            cin >> inputUsername;
 
-    // Attempt to login
-    if (app.login(inputUsername, inputPassword)) {
-        app.displayCalendar();
+            cout << "Enter new password: ";
+            cin >> inputPassword;
+
+            app.registerUser(inputUsername, inputPassword);
+        }
+        else if (choice == 2) 
+        {
+            // Login process
+            cout << "Enter username: ";
+            cin >> inputUsername;
+
+            cout << "Enter password: ";
+            cin >> inputPassword;
+
+            if (app.login(inputUsername, inputPassword)) 
+            {
+                app.displayCalendar();
+            }
+            else 
+            {
+                cout << "Invalid username or password. Please try again." << endl;
+            }
+        }
+        else if (choice == 3) 
+        {
+            cout << "Exiting the application. Goodbye!" << endl;
+            break;
+        }
+        else
+        {
+            cout << "Invalid choice. Please try again." << endl;
+        }
     }
-    else {
-        cout << "Invalid username or password. Please try again." << endl;
-    }
-
-    
 }
+
+
