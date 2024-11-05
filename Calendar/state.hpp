@@ -1,6 +1,6 @@
 #include<iostream>
 
-enum operationState {
+enum class operationState {
 	DIGITAL_CLOCK = 1,
 	TIMER,
 	ALARM,

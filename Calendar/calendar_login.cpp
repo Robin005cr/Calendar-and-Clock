@@ -96,7 +96,7 @@ public:
 };
 void calendar_login_init(char option)
 {
-    signUpLogIN();
+   
     switch (option)
     {
     case 'A':
@@ -128,7 +128,9 @@ void signUpLogIN()
 
     while (true) 
     {
-        cout << "1. Register\n2. Login\n3. Exit\nChoose an option: ";
+        cout << "1. Register\n2. Login\n3. Exit\n ";
+        cout << "Select option Register if you are a new user or Login if you are an existing user" << endl;
+        cout << "Choose an option:";
         cin >> choice;
 
         if (choice == 1) 

@@ -46,9 +46,10 @@ char subOptions(int operationNumber)
 int main()
 {
 
-	int operationInput = 0;
-	while (operationInput != 6)
+	operationState operationInput = static_cast<operationState>(0);
+	while (operationInput != operationState::EXIT)
 	{
+		int input;
 		cout << "Calendar Application" << endl;
 		cout << "1. Digital Clock" << endl;
 		cout << "2. Timer" << endl;
@@ -57,9 +58,9 @@ int main()
 		cout << "5. Calendar login" << endl;
 		cout << "6. Exit" << endl;
 		cout << "Enter the operation to be executed :";
-		cin >> operationInput;
-
-		if (operationInput > 6 || operationInput < 1)
+		cin >> input;
+		operationInput = static_cast<operationState>(input);
+		if (input > 6 || input < 1)
 		{
 			cout << "Invalid Operation" << endl;
 		}
@@ -68,32 +69,33 @@ int main()
 			char option;
 			switch (operationInput)
 			{
-			case (DIGITAL_CLOCK):
-				cout << "Digital clock" << endl;
-				option = subOptions(operationInput);
-				digitalClock_init(option);
-				break;
-			case (TIMER):
-				cout << "Timer" << endl;
-				option = subOptions(operationInput);
-				timer_init(option);
-				break;
-			case (ALARM):
-				cout << "Alarm" << endl;
-				break;
-			case (GENERAL_CALENDAR):
-				cout << "General Calendar" << endl;
-				option = subOptions(operationInput);
-				calendar_init(option);
-				break;
-			case(CALENDAR_LOGIN):
-				cout << "Calendar login" << endl;
-				option = subOptions(operationInput);
-				calendar_login_init(option);
-				break;
-			case(EXIT):
-				cout << "Exiting the application" << endl;
-				break;
+				case (operationState::DIGITAL_CLOCK):
+					cout << "Digital clock" << endl;
+					option = subOptions(input);
+					digitalClock_init(option);
+					break;
+				case (operationState::TIMER):
+					cout << "Timer" << endl;
+					option = subOptions(input);
+					timer_init(option);
+					break;
+				case (operationState::ALARM):
+					cout << "Alarm" << endl;
+					break;
+				case (operationState::GENERAL_CALENDAR):
+					cout << "General Calendar" << endl;
+					option = subOptions(input);
+					calendar_init(option);
+					break;
+				case(operationState::CALENDAR_LOGIN):
+					cout << "Calendar login" << endl;
+					signUpLogIN();
+					option = subOptions(input);
+					calendar_login_init(option);
+					break;
+				case(operationState::EXIT):
+					cout << "Exiting the application" << endl;
+					break;
 
 			}
 		}
