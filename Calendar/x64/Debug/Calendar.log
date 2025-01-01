@@ -1,2 +1,6 @@
-﻿  main.cpp
+﻿  calendar.cpp
+  calendar_login.cpp
+  timer.cpp
+  Generating Code...
+C:\Users\ASUS\Desktop\Professional_repo\Calendar AND clock\Calendar\calendar.cpp(174,1): warning C4715: 'numberOfDays': not all control paths return a value
   Calendar.vcxproj -> C:\Users\ASUS\Desktop\Professional_repo\Calendar AND clock\x64\Debug\Calendar.exe

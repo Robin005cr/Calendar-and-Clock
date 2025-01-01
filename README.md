@@ -19,3 +19,5 @@ In our day to day life we encounter many logical problems related to time. This 
 	  A. Meeting scheduler 
 	  B. Blocking for leaves and events 
 	  C. Task reminder
+
+Disclaimer : The unit test files are not added because in visual studio it is added as new project. Adding the files is making more confusions. Will add all the unit test files under test folder in future.
