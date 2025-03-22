@@ -1,19 +1,19 @@
 /*
-* project   : https://github.com/Robin005cr/Calendar-and-Clock
-* file name : digital_clock.cpp
-* author    : Robin CR
-* mail id   : robinchovallurraju@gmail.com
-* portfolio : https://robin005cr.github.io/
-*
-* Note : If any mistakes, errors, or inconsistencies are found in the code, please feel free to mail me.
-* Suggestions for improvements or better methods are always welcome and appreciated.
-* I value constructive feedback and aim to continuously improve the quality of the work.
-*
-*/
+ * project   : https://github.com/Robin005cr/Calendar-and-Clock
+ * file name : digital_clock.cpp
+ * author    : Robin CR
+ * mail id   : robinchovallurraju@gmail.com
+ * portfolio : https://robin005cr.github.io/
+ *
+ * Note : If any mistakes, errors, or inconsistencies are found in the code, please feel free to mail me.
+ * Suggestions for improvements or better methods are always welcome and appreciated.
+ * I value constructive feedback and aim to continuously improve the quality of the work.
+ *
+ */
 
-#include<iostream>
-#include<Windows.h>
-#include<string>
+#include <iostream>
+#include <Windows.h>
+#include <string>
 
 #include "digital_clock.hpp"
 using namespace std;
@@ -21,7 +21,7 @@ using namespace std;
 int timeHour, timeMin, timeSec;
 string meridieum;
 /**
- * @brief digitalClock_init() 
+ * @brief digitalClock_init()
  * Initializes the digital clock functionality based on the specified option.
  *
  * @param[in] option A character indicating the desired clock format or function:
@@ -31,12 +31,12 @@ string meridieum;
  *                   - Any other value: Invalid option
  */
 
-void digitalClock_init(char option)
+void DigitalClock::digitalClock_init(char option)
 {
 	switch (option)
 	{
-	case 'A' :
-	case 'a' :
+	case 'A':
+	case 'a':
 		normalTime();
 		break;
 	case 'B':
@@ -47,19 +47,18 @@ void digitalClock_init(char option)
 	case 'c':
 		railwayTimeConverter();
 		break;
-	default: 
+	default:
 		cout << "Invalid Option\n";
 		break;
-
 	}
 }
 
 /**
  * @brief normalTime()
  * A function which displays 12 hr clock based on meridieum(AM/PM)
- * 
+ *
  */
-void normalTime()
+void DigitalClock::normalTime()
 {
 	cout << "Enter the Current time";
 	cout << "Enter the hour :" << endl;
@@ -87,9 +86,8 @@ void normalTime()
 					{
 						system("cls");
 
-						cout << "Current time:" << timeHour << "hr:" << timeMin << "min:" << timeSec << "sec"<<" "<<meridieum;
+						cout << "Current time:" << timeHour << "hr:" << timeMin << "min:" << timeSec << "sec" << " " << meridieum;
 						Sleep(1000);
-						
 					}
 					timeSec = 0;
 				}
@@ -98,16 +96,13 @@ void normalTime()
 			timeHour = 0;
 		}
 	}
-
-
-
 }
 /**
  * @brief railwayTime()
  * A function which displays 24 hr clock which we usually refer as railway time.
  *
  */
-void railwayTime()
+void DigitalClock::railwayTime()
 {
 	cout << "Enter the Current time";
 	cout << "Enter the hour (24 hour format) :" << endl;
@@ -135,7 +130,6 @@ void railwayTime()
 
 						cout << "Current time:" << timeHour << "hr:" << timeMin << "min:" << timeSec << "sec";
 						Sleep(1000);
-
 					}
 					timeSec = 0;
 				}
@@ -144,13 +138,8 @@ void railwayTime()
 			timeHour = 0;
 		}
 	}
-
-
-
 }
 
-
-void railwayTimeConverter()
+void DigitalClock::railwayTimeConverter()
 {
-
 }

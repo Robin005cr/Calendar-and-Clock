@@ -1,18 +1,17 @@
-/* 
-* project   : https://github.com/Robin005cr/Calendar-and-Clock
-* file name : main.cpp
-* author    : Robin CR
-* mail id   : robinchovallurraju@gmail.com
-* portfolio : https://robin005cr.github.io/
-* 
-* Note : If any mistakes, errors, or inconsistencies are found in the code, please feel free to mail me. 
-* Suggestions for improvements or better methods are always welcome and appreciated. 
-* I value constructive feedback and aim to continuously improve the quality of the work.
-* 
-*/
+/*
+ * project   : https://github.com/Robin005cr/Calendar-and-Clock
+ * file name : main.cpp
+ * author    : Robin CR
+ * mail id   : robinchovallurraju@gmail.com
+ * portfolio : https://robin005cr.github.io/
+ *
+ * Note : If any mistakes, errors, or inconsistencies are found in the code, please feel free to mail me.
+ * Suggestions for improvements or better methods are always welcome and appreciated.
+ * I value constructive feedback and aim to continuously improve the quality of the work.
+ *
+ */
 
-
-#include<iostream>
+#include <iostream>
 #include "state.hpp"
 #include "digital_clock.hpp"
 #include "calendar.hpp"
@@ -44,7 +43,7 @@ char subOptions(int operationNumber)
 		cin >> ch;
 		break;
 	case 5:
-		//cout << "A. Sign up for calendar" << endl;
+		// cout << "A. Sign up for calendar" << endl;
 		cout << "A. Meeting scheduler" << endl;
 		cout << "B. Blocking for leaves and events" << endl;
 		cout << "C. Task reminder" << endl;
@@ -83,37 +82,36 @@ int main()
 			char option;
 			switch (operationInput)
 			{
-				case (operationState::DIGITAL_CLOCK):
-					cout << "Digital clock" << endl;
-					option = subOptions(input);
-					digitalClock_init(option);
-					break;
-				case (operationState::TIMER):
-					cout << "Timer" << endl;
-					option = subOptions(input);
-					timer_init(option);
-					break;
-				case (operationState::ALARM):
-					cout << "Alarm" << endl;
-					break;
-				case (operationState::GENERAL_CALENDAR):
-					cout << "General Calendar" << endl;
-					option = subOptions(input);
-					calendar_init(option);
-					break;
-				case(operationState::CALENDAR_LOGIN):
-					cout << "Calendar login" << endl;
-					signUpLogIN();
-					option = subOptions(input);
-					calendar_login_init(option);
-					break;
-				case(operationState::EXIT):
-					cout << "Exiting the application" << endl;
-					break;
-
+			case (operationState::DIGITAL_CLOCK):
+				cout << "Digital clock" << endl;
+				option = subOptions(input);
+				DigitalClock D;
+				D.digitalClock_init(option);
+				break;
+			case (operationState::TIMER):
+				cout << "Timer" << endl;
+				option = subOptions(input);
+				timer_init(option);
+				break;
+			case (operationState::ALARM):
+				cout << "Alarm" << endl;
+				break;
+			case (operationState::GENERAL_CALENDAR):
+				cout << "General Calendar" << endl;
+				Calendar C;
+				option = subOptions(input);
+				C.calendar_init(option);
+				break;
+			case (operationState::CALENDAR_LOGIN):
+				cout << "Calendar login" << endl;
+				signUpLogIN();
+				option = subOptions(input);
+				calendar_login_init(option);
+				break;
+			case (operationState::EXIT):
+				cout << "Exiting the application" << endl;
+				break;
 			}
 		}
-
 	}
-
 }

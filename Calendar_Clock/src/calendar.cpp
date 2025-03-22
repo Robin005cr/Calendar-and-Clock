@@ -1,35 +1,36 @@
 /*
-* project   : https://github.com/Robin005cr/Calendar-and-Clock
-* file name : calendar.cpp
-* author    : Robin CR
-* mail id   : robinchovallurraju@gmail.com
-* portfolio : https://robin005cr.github.io/
-*
-* Note : If any mistakes, errors, or inconsistencies are found in the code, please feel free to mail me.
-* Suggestions for improvements or better methods are always welcome and appreciated.
-* I value constructive feedback and aim to continuously improve the quality of the work.
-*
-*/
+ * project   : https://github.com/Robin005cr/Calendar-and-Clock
+ * file name : calendar.cpp
+ * author    : Robin CR
+ * mail id   : robinchovallurraju@gmail.com
+ * portfolio : https://robin005cr.github.io/
+ *
+ * Note : If any mistakes, errors, or inconsistencies are found in the code, please feel free to mail me.
+ * Suggestions for improvements or better methods are always welcome and appreciated.
+ * I value constructive feedback and aim to continuously improve the quality of the work.
+ *
+ */
 
-#include<iostream>
+#include <iostream>
+#include <iomanip>
 using namespace std;
 #include "calendar.hpp"
 
 // Driver Program to check above functions
-int getYear()
+int Calendar::getYear()
 {
 	int year;
 	cout << "Enter the year:";
 	cin >> year;
 	return year;
 }
-void calendar_init(char option)
+void Calendar::calendar_init(char option)
 {
 	int year = getYear();
 	switch (option)
 	{
 	case 'A':
-	case 'a': 
+	case 'a':
 		printCalendarYear(year);
 		break;
 	case 'B':
@@ -37,12 +38,11 @@ void calendar_init(char option)
 		break;
 	case 'C':
 	case 'c':
-		
+
 		break;
 	default:
 		cout << "Invalid Option\n";
 		break;
-
 	}
 }
 
@@ -58,14 +58,15 @@ Index	 Day
 4		 Thursday
 5		 Friday
 6		 Saturday*/
-int dayNumber(int day, int month, int year)
+int Calendar::dayNumber(int day, int month, int year)
 {
 
-	static int t[] = { 0, 3, 2, 5, 0, 3, 5, 1,
-					4, 6, 2, 4 };
+	static int t[] = {0, 3, 2, 5, 0, 3, 5, 1,
+					  4, 6, 2, 4};
 	year -= month < 3;
 	return (year + year / 4 - year / 100 +
-		year / 400 + t[month - 1] + day) % 7;
+			year / 400 + t[month - 1] + day) %
+		   7;
 }
 
 /*
@@ -85,13 +86,12 @@ Month Number	 Name
 9			 October
 10			 November
 11			 December */
-string getMonthName(int monthNumber)
+string Calendar::getMonthName(int monthNumber)
 {
-	string months[] = { "January", "February", "March",
-					"April", "May", "June",
-					"July", "August", "September",
-					"October", "November", "December"
-	};
+	string months[] = {"January", "February", "March",
+					   "April", "May", "June",
+					   "July", "August", "September",
+					   "October", "November", "December"};
 
 	return (months[monthNumber]);
 }
@@ -114,7 +114,7 @@ Month Number	 Name	 Number of Days
 11			 December 31
 
 */
-int numberOfDays(int monthNumber, int year)
+int Calendar::numberOfDays(int monthNumber, int year)
 {
 	// January
 	if (monthNumber == 0)
@@ -174,50 +174,44 @@ int numberOfDays(int monthNumber, int year)
 }
 
 // Function to print the calendar of the given year
-void printCalendarYear(int year)
+void Calendar::printCalendarYear(int year)
 {
-	cout<<"		 Calendar - "<<year<<"\n\n";
+	cout << "         Calendar - " << year << "\n\n";
 	int days;
 
 	// Index of the day from 0 to 6
 	int current = dayNumber(1, 1, year);
 
-	// i --> Iterate through all the months
-	// j --> Iterate through all the days of the
-	//	 month - i
+	// Iterate through all the months
 	for (int i = 0; i < 12; i++)
 	{
 		days = numberOfDays(i, year);
 
 		// Print the current month name
-		cout<<"\n ------------%s-------------\n"<<getMonthName(i).c_str()<<"\n";
+		cout << "\n -------------" << getMonthName(i) << "-------------\n";
 
 		// Print the columns
-		cout<<"  Sun  Mon  Tue  Wed  Thu  Fri  Sat\n";
+		cout << "  Sun  Mon  Tue  Wed  Thu  Fri  Sat\n";
 
 		// Print appropriate spaces
 		int k;
 		for (k = 0; k < current; k++)
-			cout<<"	 ";
+			cout << "     ";
 
 		for (int j = 1; j <= days; j++)
 		{
-			printf("%5d", j);
+			cout << setw(5) << j;
 
 			if (++k > 6)
 			{
 				k = 0;
-				cout<<"\n";
+				cout << "\n";
 			}
 		}
 
 		if (k)
-			cout<<"\n";
+			cout << "\n";
 
 		current = k;
 	}
-
-	return;
 }
-
-

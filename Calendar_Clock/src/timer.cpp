@@ -1,22 +1,22 @@
 /*
-* project   : https://github.com/Robin005cr/Calendar-and-Clock
-* file name : timer.cpp
-* author    : Robin CR
-* mail id   : robinchovallurraju@gmail.com
-* portfolio : https://robin005cr.github.io/
-*
-* Note : If any mistakes, errors, or inconsistencies are found in the code, please feel free to mail me.
-* Suggestions for improvements or better methods are always welcome and appreciated.
-* I value constructive feedback and aim to continuously improve the quality of the work.
-*
-*/
+ * project   : https://github.com/Robin005cr/Calendar-and-Clock
+ * file name : timer.cpp
+ * author    : Robin CR
+ * mail id   : robinchovallurraju@gmail.com
+ * portfolio : https://robin005cr.github.io/
+ *
+ * Note : If any mistakes, errors, or inconsistencies are found in the code, please feel free to mail me.
+ * Suggestions for improvements or better methods are always welcome and appreciated.
+ * I value constructive feedback and aim to continuously improve the quality of the work.
+ *
+ */
 #include <iostream>
 #include <cstdlib>
 #include <chrono>
 #include <thread>
 #include "timer.hpp"
-//#include <unistd.h>
-//#include <Windows.h>
+// #include <unistd.h>
+// #include <Windows.h>
 using namespace std;
 void timer_init(char option)
 {
@@ -24,11 +24,11 @@ void timer_init(char option)
     {
     case 'A':
     case 'a':
-        //normalTime();
+        // normalTime();
         break;
     case 'B':
     case 'b':
-        //railwayTime();
+        // railwayTime();
         break;
     case 'C':
     case 'c':
@@ -37,7 +37,6 @@ void timer_init(char option)
     default:
         cout << "Invalid Option\n";
         break;
-
     }
 }
 void countDownTimer()
@@ -53,7 +52,8 @@ void countDownTimer()
     } while (seconds < 0 || seconds > 59);
 
     // Input validation for minutes
-    do {
+    do
+    {
         cout << "Enter minutes (0-59): ";
         cin >> minutes;
     } while (minutes < 0 || minutes > 59);
@@ -62,7 +62,8 @@ void countDownTimer()
     totalTime = minutes * 60 + seconds;
 
     // Countdown loop
-    for (int i = totalTime; i > 0; i--) {
+    for (int i = totalTime; i > 0; i--)
+    {
         // Clear the console
         system("clear"); // For Linux/Unix
         // system("cls"); // Uncomment for Windows
@@ -73,8 +74,8 @@ void countDownTimer()
 
         // Display the remaining time
         cout << "The time remaining is "
-            << remainingMinutes << ":"
-            << (remainingSeconds < 10 ? "0" : "") << remainingSeconds << endl;
+             << remainingMinutes << ":"
+             << (remainingSeconds < 10 ? "0" : "") << remainingSeconds << endl;
 
         // Sleep for one second
         this_thread::sleep_for(chrono::seconds(1));
