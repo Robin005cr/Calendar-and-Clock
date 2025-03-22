@@ -1,0 +1,8 @@
+# ninja log v5
+23	317	7643596110158346	build.ninja	c0442dd1f8a09192
+28	3036	7643593860737812	CMakeFiles/Calendar_Clock.dir/src/calendar_login.cpp.obj	91de84a8d855253e
+76	2542	7643593855784211	CMakeFiles/Calendar_Clock.dir/src/main.cpp.obj	18f2b1f5dd5aacc5
+5	2546	7643593855824896	CMakeFiles/Calendar_Clock.dir/src/calendar.cpp.obj	bdda7cc9f6044b6c
+53	3682	7643593867209027	CMakeFiles/Calendar_Clock.dir/src/digital_clock.cpp.obj	98a87e0c2066ae84
+111	4535	7643593875673634	CMakeFiles/Calendar_Clock.dir/src/timer.cpp.obj	8cc441e53d001c72
+4536	5539	7643593885354865	Calendar_Clock.exe	9592b95faf4eb55a
