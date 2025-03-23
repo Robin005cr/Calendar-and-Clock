@@ -12,7 +12,13 @@
  */
 class Timer
 {
+private:
+	short minutes, seconds;
+	int totalTime;
+
 public:
-	void countDownTimer();
 	void timer_init(char option);
+	void infiniteTimer();
+	void stopWatch();
+	void countDownTimer();
 };

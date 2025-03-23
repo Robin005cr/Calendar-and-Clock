@@ -10,8 +10,14 @@
  * I value constructive feedback and aim to continuously improve the quality of the work.
  *
  */
+#include<string>
+using namespace std;
 class DigitalClock
 {
+
+private:
+	int timeHour, timeMin, timeSec;
+	string meridieum;
 public:
 	void normalTime();
 	void railwayTime();

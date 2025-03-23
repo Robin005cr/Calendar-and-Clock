@@ -18,8 +18,6 @@
 #include "digital_clock.hpp"
 using namespace std;
 
-int timeHour, timeMin, timeSec;
-string meridieum;
 /**
  * @brief digitalClock_init()
  * Initializes the digital clock functionality based on the specified option.

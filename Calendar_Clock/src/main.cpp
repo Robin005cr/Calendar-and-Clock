@@ -85,12 +85,13 @@ int main()
 		else
 		{
 			char option;
+			DigitalClock D;
 			switch (operationInput)
 			{
 			case (operationState::DIGITAL_CLOCK):
 				cout << "Digital clock" << endl;
 				option = subOptions(input);
-				DigitalClock D;
+				
 				D.digitalClock_init(option);
 				break;
 			case (operationState::TIMER):

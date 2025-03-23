@@ -24,11 +24,11 @@ void Timer::timer_init(char option)
     {
     case 'A':
     case 'a':
-        // normalTime();
+        // infiniteTimer();
         break;
     case 'B':
     case 'b':
-        // railwayTime();
+        stopWatch();
         break;
     case 'C':
     case 'c':
@@ -39,10 +39,53 @@ void Timer::timer_init(char option)
         break;
     }
 }
+
+void Timer::infiniteTimer()
+{
+}
+
+void Timer::stopWatch()
+{
+    // Input validation for minutes
+    do
+    {
+        cout << "Enter minutes (0-59): ";
+        cin >> minutes;
+    } while (minutes < 0 || minutes > 59);
+    // Input validation for seconds
+    do
+    {
+        cout << "Enter seconds (0-59): ";
+        cin >> seconds;
+    } while (seconds < 0 || seconds > 59);
+
+    // Calculate total time in seconds
+    totalTime = minutes * 60 + seconds;
+
+    // Countdown loop
+    for (int i = 0; i <= totalTime; i++)
+    {
+        // Clear the console
+        // system("clear"); // For Linux/Unix
+        system("cls"); // Uncomment for Windows
+
+        // Calculate remaining time
+        int remainingMinutes = i / 60;
+        int remainingSeconds = i % 60;
+
+        // Display the remaining time
+        cout << "Ticking "
+             << remainingMinutes << ":"
+             << (remainingSeconds < 10 ? "0" : "") << remainingSeconds << endl;
+
+        // Sleep for one second
+        this_thread::sleep_for(chrono::seconds(1));
+    }
+
+    cout << "Times UP ..." << endl;
+}
 void Timer::countDownTimer()
 {
-    short minutes, seconds;
-    int totalTime;
 
     // Input validation for seconds
     do
@@ -65,8 +108,8 @@ void Timer::countDownTimer()
     for (int i = totalTime; i > 0; i--)
     {
         // Clear the console
-        system("clear"); // For Linux/Unix
-        // system("cls"); // Uncomment for Windows
+        // system("clear"); // For Linux/Unix
+        system("cls"); // Uncomment for Windows
 
         // Calculate remaining time
         int remainingMinutes = i / 60;
