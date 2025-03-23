@@ -10,5 +10,9 @@
  * I value constructive feedback and aim to continuously improve the quality of the work.
  *
  */
-void countDownTimer();
-void timer_init(char option);
+class Timer
+{
+public:
+	void countDownTimer();
+	void timer_init(char option);
+};

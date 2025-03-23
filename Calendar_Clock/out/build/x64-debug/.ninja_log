@@ -1,9 +1,19 @@
 # ninja log v5
-23	317	7643696170736459	build.ninja	c0442dd1f8a09192
-15	1188	7643679108912380	CMakeFiles/Calendar_Clock.dir/src/calendar_login.cpp.obj	91de84a8d855253e
-9	581	7643693012368282	CMakeFiles/Calendar_Clock.dir/src/main.cpp.obj	18f2b1f5dd5aacc5
-1	514	7643694364196969	CMakeFiles/Calendar_Clock.dir/src/calendar.cpp.obj	bdda7cc9f6044b6c
-1	787	7643682103983786	CMakeFiles/Calendar_Clock.dir/src/digital_clock.cpp.obj	98a87e0c2066ae84
-39	1589	7643679112920127	CMakeFiles/Calendar_Clock.dir/src/timer.cpp.obj	8cc441e53d001c72
-515	699	7643688483843961	Calendar_Clock.exe	9592b95faf4eb55a
-1	255	7643696264434109	Calendar_Clock.exe	9592b95faf4eb55a
+39	1384	7644264061932467	CMakeFiles/Calendar_Clock.dir/src/main.cpp.obj	18f2b1f5dd5aacc5
+5	1531	7644264063378911	CMakeFiles/Calendar_Clock.dir/src/calendar.cpp.obj	bdda7cc9f6044b6c
+16	1668	7644264064758585	CMakeFiles/Calendar_Clock.dir/src/calendar_login.cpp.obj	91de84a8d855253e
+27	1980	7644264067892345	CMakeFiles/Calendar_Clock.dir/src/digital_clock.cpp.obj	98a87e0c2066ae84
+52	2414	7644264072214309	CMakeFiles/Calendar_Clock.dir/src/timer.cpp.obj	8cc441e53d001c72
+2415	3038	7644264078186937	Calendar_Clock.exe	9592b95faf4eb55a
+6	857	7644264707728763	CMakeFiles/Calendar_Clock.dir/src/main.cpp.obj	18f2b1f5dd5aacc5
+859	1215	7644264710692633	Calendar_Clock.exe	9592b95faf4eb55a
+5	944	7644265240017640	CMakeFiles/Calendar_Clock.dir/src/main.cpp.obj	18f2b1f5dd5aacc5
+4	26	0	clean	8c45b54705a541e8
+46	1404	7644265440273984	CMakeFiles/Calendar_Clock.dir/src/main.cpp.obj	18f2b1f5dd5aacc5
+9	1564	7644265441872398	CMakeFiles/Calendar_Clock.dir/src/calendar.cpp.obj	bdda7cc9f6044b6c
+20	1658	7644265442705071	CMakeFiles/Calendar_Clock.dir/src/calendar_login.cpp.obj	91de84a8d855253e
+32	1973	7644265445990631	CMakeFiles/Calendar_Clock.dir/src/digital_clock.cpp.obj	98a87e0c2066ae84
+58	2492	7644265451117094	CMakeFiles/Calendar_Clock.dir/src/timer.cpp.obj	8cc441e53d001c72
+2493	2897	7644265454450280	Calendar_Clock.exe	9592b95faf4eb55a
+5	1161	7644268901105904	CMakeFiles/Calendar_Clock.dir/src/main.cpp.obj	18f2b1f5dd5aacc5
+1162	1544	7644268904229628	Calendar_Clock.exe	9592b95faf4eb55a

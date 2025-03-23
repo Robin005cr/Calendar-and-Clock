@@ -18,5 +18,6 @@ enum class operationState
 	ALARM,
 	GENERAL_CALENDAR,
 	CALENDAR_LOGIN,
-	EXIT
+	EXIT,
+	INVALID_CHOICE
 };

@@ -18,7 +18,7 @@
 // #include <unistd.h>
 // #include <Windows.h>
 using namespace std;
-void timer_init(char option)
+void Timer::timer_init(char option)
 {
     switch (option)
     {
@@ -39,7 +39,7 @@ void timer_init(char option)
         break;
     }
 }
-void countDownTimer()
+void Timer::countDownTimer()
 {
     short minutes, seconds;
     int totalTime;

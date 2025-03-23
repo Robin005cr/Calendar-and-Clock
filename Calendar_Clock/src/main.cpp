@@ -12,6 +12,7 @@
  */
 
 #include <iostream>
+#include <limits> 
 #include "state.hpp"
 #include "digital_clock.hpp"
 #include "calendar.hpp"
@@ -60,7 +61,7 @@ int main()
 {
 
 	operationState operationInput = static_cast<operationState>(0);
-	while (operationInput != operationState::EXIT)
+	while ((operationInput != operationState::EXIT) )
 	{
 		int input;
 		cout << "Calendar Application" << endl;
@@ -76,6 +77,10 @@ int main()
 		if (input > 6 || input < 1)
 		{
 			cout << "Invalid Operation" << endl;
+			cin.clear(); // Clear the error flag
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			operationInput = operationState::INVALID_CHOICE;
+			//continue;
 		}
 		else
 		{
@@ -90,8 +95,9 @@ int main()
 				break;
 			case (operationState::TIMER):
 				cout << "Timer" << endl;
+				Timer T;
 				option = subOptions(input);
-				timer_init(option);
+				T.timer_init(option);
 				break;
 			case (operationState::ALARM):
 				cout << "Alarm" << endl;
@@ -111,6 +117,7 @@ int main()
 			case (operationState::EXIT):
 				cout << "Exiting the application" << endl;
 				break;
+			
 			}
 		}
 	}
