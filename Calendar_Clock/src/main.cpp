@@ -86,6 +86,7 @@ int main()
 		{
 			char option;
 			DigitalClock D;
+			CalendarApp obj;
 			switch (operationInput)
 			{
 			case (operationState::DIGITAL_CLOCK):
@@ -110,10 +111,11 @@ int main()
 				C.calendar_init(option);
 				break;
 			case (operationState::CALENDAR_LOGIN):
+				
 				cout << "Calendar login" << endl;
-				signUpLogIN();
+				obj.signUpLogIN();
 				option = subOptions(input);
-				calendar_login_init(option);
+				obj.calendar_login_init(option);
 				break;
 			case (operationState::EXIT):
 				cout << "Exiting the application" << endl;

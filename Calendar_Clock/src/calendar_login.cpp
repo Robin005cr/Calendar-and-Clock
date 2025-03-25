@@ -19,95 +19,88 @@
 #include "calendar_login.hpp"
 using namespace std;
 
-class CalendarApp
+size_t CalendarApp::hashPassword(const string &password)
 {
-private:
-    unordered_map<string, size_t> users;     // Stores usernames and hashed passwords
-    const string filename = "user_data.txt"; // File to store user data
+    // Hashing function for passwords
+    return hash<string>{}(password);
+}
 
-    size_t hashPassword(const string &password)
+void CalendarApp::saveUserData()
+{
+    ofstream file(filename);
+    if (file.is_open())
     {
-        // Hashing function for passwords
-        return hash<string>{}(password);
-    }
-
-    void saveUserData()
-    {
-        ofstream file(filename);
-        if (file.is_open())
+        for (const auto &user : users)
         {
-            for (const auto &user : users)
-            {
-                file << user.first << " " << user.second << endl;
-            }
-            file.close();
+            file << user.first << " " << user.second << endl;
         }
-        else
+        file.close();
+    }
+    else
+    {
+        cout << "Error: Unable to save user data." << endl;
+    }
+}
+
+void CalendarApp::loadUserData()
+{
+    ifstream file(filename);
+    if (file.is_open())
+    {
+        string username;
+        size_t hashedPassword;
+        while (file >> username >> hashedPassword)
         {
-            cout << "Error: Unable to save user data." << endl;
+            users[username] = hashedPassword;
         }
+        file.close();
     }
-
-    void loadUserData()
+    else
     {
-        ifstream file(filename);
-        if (file.is_open())
-        {
-            string username;
-            size_t hashedPassword;
-            while (file >> username >> hashedPassword)
-            {
-                users[username] = hashedPassword;
-            }
-            file.close();
-        }
-        else
-        {
-            cout << "No previous user data found. Starting fresh." << endl;
-        }
+        cout << "No previous user data found. Starting fresh." << endl;
     }
+}
 
-public:
-    CalendarApp()
-    {
-        loadUserData(); // Load user data when the app starts
-    }
+CalendarApp::CalendarApp()
+{
+    loadUserData(); // Load user data when the app starts
+}
 
-    ~CalendarApp()
-    {
-        saveUserData(); // Save user data when the app closes
-    }
+CalendarApp::~CalendarApp()
+{
+    saveUserData(); // Save user data when the app closes
+}
 
-    bool registerUser(const string &newUsername, const string &newPassword)
+bool CalendarApp::registerUser(const string &newUsername, const string &newPassword)
+{
+    if (users.find(newUsername) != users.end())
     {
-        if (users.find(newUsername) != users.end())
-        {
-            cout << "Username already exists. Please choose another one." << endl;
-            return false;
-        }
-        users[newUsername] = hashPassword(newPassword);
-        cout << "User registered successfully!" << endl;
-        saveUserData(); // Save after registration
-        return true;
+        cout << "Username already exists. Please choose another one." << endl;
+        return false;
     }
+    users[newUsername] = hashPassword(newPassword);
+    cout << "User registered successfully!" << endl;
+    saveUserData(); // Save after registration
+    return true;
+}
 
-    bool login(const string &inputUsername, const string &inputPassword)
+bool CalendarApp::login(const string &inputUsername, const string &inputPassword)
+{
+    auto it = users.find(inputUsername);
+    if (it != users.end() && it->second == hashPassword(inputPassword))
     {
-        auto it = users.find(inputUsername);
-        if (it != users.end() && it->second == hashPassword(inputPassword))
-        {
-            return true; // Successful login
-        }
-        return false; // Invalid username or password
+        return true; // Successful login
     }
+    return false; // Invalid username or password
+}
 
-    void displayCalendar()
-    {
-        cout << "Welcome to your calendar!" << endl;
-        // More calendar features could be added here
-    }
-};
-void calendar_login_init(char option)
+void CalendarApp::displayCalendar()
+{
+    cout << "Welcome to your calendar!" << endl;
+    // More calendar features could be added here
+}
+
+void CalendarApp::calendar_login_init(char option)
 {
 
     switch (option)
@@ -130,16 +123,17 @@ void calendar_login_init(char option)
     }
 }
 
-void signUpLogIN()
+void CalendarApp::signUpLogIN()
 {
-    CalendarApp app;
-    string inputUsername, inputPassword;
-    int choice;
+
+   
 
     cout << "Welcome to the Calendar Application!" << endl;
 
     while (true)
     {
+        string inputUsername, inputPassword;
+        int choice;
         cout << "1. Register\n2. Login\n3. Exit\n ";
         cout << "Select option Register if you are a new user or Login if you are an existing user" << endl;
         cout << "Choose an option:";
@@ -154,7 +148,7 @@ void signUpLogIN()
             cout << "Enter new password: ";
             cin >> inputPassword;
 
-            app.registerUser(inputUsername, inputPassword);
+            registerUser(inputUsername, inputPassword);
         }
         else if (choice == 2)
         {
@@ -165,9 +159,9 @@ void signUpLogIN()
             cout << "Enter password: ";
             cin >> inputPassword;
 
-            if (app.login(inputUsername, inputPassword))
+            if (login(inputUsername, inputPassword))
             {
-                app.displayCalendar();
+                displayCalendar();
             }
             else
             {
