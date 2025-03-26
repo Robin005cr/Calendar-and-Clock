@@ -107,15 +107,15 @@ void CalendarApp::calendar_login_init(char option)
     {
     case 'A':
     case 'a':
-        // signUpLogIN();
+        meetingScheduler();
         break;
     case 'B':
     case 'b':
-        // railwayTime();
+        eventLeaveBlocker();
         break;
     case 'C':
     case 'c':
-        // railwayTimeConverter();
+        taskReminderAlert();
         break;
     default:
         cout << "Invalid Option\n";
@@ -178,4 +178,16 @@ void CalendarApp::signUpLogIN()
             cout << "Invalid choice. Please try again." << endl;
         }
     }
+}
+void CalendarApp::meetingScheduler()
+{
+
+}
+void CalendarApp::eventLeaveBlocker()
+{
+
+}
+void CalendarApp::taskReminderAlert()
+{
+
 }

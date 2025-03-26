@@ -34,4 +34,8 @@ public:
     void displayCalendar();
     void calendar_login_init(char option);
     void signUpLogIN();
+    void meetingScheduler();
+    void eventLeaveBlocker();
+    void taskReminderAlert();
+    
 };
