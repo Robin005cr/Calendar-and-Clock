@@ -189,5 +189,16 @@ void CalendarApp::eventLeaveBlocker()
 }
 void CalendarApp::taskReminderAlert()
 {
+    string task_alertName;
+    
+    cout << "Enter the task to be reminded:";
+    cin >> task_alertName;
+    int time;
+
+    cout << "Enter the details of time:";
+    cin >> time;
+    //if(time == getTime)
+
+
 
 }
