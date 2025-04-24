@@ -1,11 +1,8 @@
-# ninja log v5
-41	1700	7646301923411794	CMakeFiles/Calendar_Clock.dir/src/main.cpp.obj	18f2b1f5dd5aacc5
-3	1652	7646301922952230	CMakeFiles/Calendar_Clock.dir/src/calendar.cpp.obj	bdda7cc9f6044b6c
-15	1752	7646301923954876	CMakeFiles/Calendar_Clock.dir/src/calendar_login.cpp.obj	91de84a8d855253e
-27	2253	7646301928963850	CMakeFiles/Calendar_Clock.dir/src/digital_clock.cpp.obj	98a87e0c2066ae84
-2	166	0	clean	8c45b54705a541e8
-56	2752	7646301933940973	CMakeFiles/Calendar_Clock.dir/src/timer.cpp.obj	8cc441e53d001c72
-2752	3341	7646301938328039	Calendar_Clock.exe	9592b95faf4eb55a
-15	1501	7647162984343486	CMakeFiles/Calendar_Clock.dir/src/main.cpp.obj	18f2b1f5dd5aacc5
-3	1554	7647162984752108	CMakeFiles/Calendar_Clock.dir/src/calendar_login.cpp.obj	91de84a8d855253e
-1555	2035	7647162988436790	Calendar_Clock.exe	9592b95faf4eb55a
+# ninja log v6
+78	2853	7672213914873997	CMakeFiles/Calendar_Clock.dir/src/main.cpp.obj	5642def4d9786fbc
+30	2862	7672213914391799	CMakeFiles/Calendar_Clock.dir/src/calendar.cpp.obj	d0321e1ff205c4f7
+60	2876	7672213914701087	CMakeFiles/Calendar_Clock.dir/src/digital_clock.cpp.obj	c8a782dedb38809
+43	2905	7672213914543686	CMakeFiles/Calendar_Clock.dir/src/calendar_login.cpp.obj	983e67d8993eebb3
+96	3443	7672213915071210	CMakeFiles/Calendar_Clock.dir/src/timer.cpp.obj	33e2b038452887c0
+10	2150	7672215079771743	CMakeFiles/Calendar_Clock.dir/src/alarm.cpp.obj	707a430295d295ba
+2151	3000	7672215101181990	Calendar_Clock.exe	6f0a3cac34f7d35c

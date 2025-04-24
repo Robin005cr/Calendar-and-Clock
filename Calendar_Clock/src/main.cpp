@@ -12,12 +12,13 @@
  */
 
 #include <iostream>
-#include <limits> 
+#include <limits>
 #include "state.hpp"
 #include "digital_clock.hpp"
 #include "calendar.hpp"
 #include "calendar_login.hpp"
 #include "timer.hpp"
+#include "alarm.hpp"
 using namespace std;
 
 char subOptions(int operationNumber)
@@ -37,6 +38,9 @@ char subOptions(int operationNumber)
 		cout << "C. Count down timer" << endl;
 		cin >> ch;
 		break;
+	case 3:
+		cout<<"A. Alarm"<<endl;
+		cin>>ch;
 	case 4:
 		cout << "A. Calendar of year" << endl;
 		cout << "B. Calendar of a particlar month" << endl;
@@ -61,7 +65,7 @@ int main()
 {
 
 	operationState operationInput = static_cast<operationState>(0);
-	while ((operationInput != operationState::EXIT) )
+	while ((operationInput != operationState::EXIT))
 	{
 		int input;
 		cout << "Calendar Application" << endl;
@@ -80,19 +84,20 @@ int main()
 			cin.clear(); // Clear the error flag
 			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			operationInput = operationState::INVALID_CHOICE;
-			//continue;
+			// continue;
 		}
 		else
 		{
 			char option;
 			DigitalClock D;
 			CalendarApp obj;
+			Alarm A;
 			switch (operationInput)
 			{
 			case (operationState::DIGITAL_CLOCK):
 				cout << "Digital clock" << endl;
 				option = subOptions(input);
-				
+
 				D.digitalClock_init(option);
 				break;
 			case (operationState::TIMER):
@@ -103,6 +108,7 @@ int main()
 				break;
 			case (operationState::ALARM):
 				cout << "Alarm" << endl;
+				A.alarm_init();
 				break;
 			case (operationState::GENERAL_CALENDAR):
 				cout << "General Calendar" << endl;
@@ -111,7 +117,7 @@ int main()
 				C.calendar_init(option);
 				break;
 			case (operationState::CALENDAR_LOGIN):
-				
+
 				cout << "Calendar login" << endl;
 				obj.signUpLogIN();
 				option = subOptions(input);
@@ -120,7 +126,6 @@ int main()
 			case (operationState::EXIT):
 				cout << "Exiting the application" << endl;
 				break;
-			
 			}
 		}
 	}
