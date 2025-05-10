@@ -1,0 +1,15 @@
+@startuml digital_clock.puml
+
+class DigitalClock {
+  - int timeHour
+  - int timeMin
+  - int timeSec
+  - string meridieum
+
+  + void normalTime()
+  + void railwayTime()
+  + void railwayTimeConverter()
+  + void digitalClock_init(char option)
+}
+
+@enduml 

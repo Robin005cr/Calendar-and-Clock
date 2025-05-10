@@ -1,0 +1,10 @@
+@startuml alarm.puml
+class Alarm{
+
+    - int hour
+    - int minute
+
+    + void alarm_init()
+    + void wait_until(int target_hour, int target_minute)
+}
+@enduml

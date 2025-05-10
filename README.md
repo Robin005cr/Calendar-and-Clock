@@ -29,7 +29,7 @@ C. Task reminder
 - The reason why its not added is that key board interrupt is different according to the OS.
 - The unit test files are not added because in Visual Studio it is added as a new project. Adding the files is making more confusion. Will add all the unit test files under the test folder in future.
 
-📥 Clone the repo
+## 📥 Clone the repo
 
 To clone the repository, run:
 
