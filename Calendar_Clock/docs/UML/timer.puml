@@ -4,7 +4,7 @@ class Timer
 
     - short minutes
     - short seconds
-    - int totalTime
+    - uint8_t totalTime
 
     + void timer_init(char option)
     + void infiniteTimer()

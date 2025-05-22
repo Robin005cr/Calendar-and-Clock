@@ -16,7 +16,7 @@ class DigitalClock
 {
 
 private:
-	int timeHour, timeMin, timeSec;
+	uint8_t timeHour, timeMin, timeSec;
 	string meridieum;
 public:
 	void normalTime();

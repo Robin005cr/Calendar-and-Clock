@@ -12,14 +12,15 @@
  */
 
 #include <string>
+#include <cstdint>
 using namespace std;
 
 class Alarm
 {
 private:
-    int hour, minute;
+    uint8_t hour, minute;
 
 public:
     void alarm_init();
-    void wait_until(int target_hour, int target_minute);
+    void wait_until(uint8_t target_hour, uint8_t target_minute);
 };

@@ -18,9 +18,9 @@ class Calendar
 {
 public:
 	int getYear();
-	int dayNumber(int day, int month, int year);
-	string getMonthName(int monthNumber);
-	int numberOfDays(int monthNumber, int year);
+	uint8_t dayNumber(uint8_t day, uint8_t month, int year);
+	string getMonthName(uint8_t monthNumber);
+	uint8_t numberOfDays(uint8_t monthNumber, int year);
 	void printCalendarYear(int year);
 	void calendar_init(char option);
 };

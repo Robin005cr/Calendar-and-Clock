@@ -58,7 +58,7 @@ Index	 Day
 4		 Thursday
 5		 Friday
 6		 Saturday*/
-int Calendar::dayNumber(int day, int month, int year)
+uint8_t Calendar::dayNumber(uint8_t day, uint8_t month, int year)
 {
 
 	static int t[] = {0, 3, 2, 5, 0, 3, 5, 1,
@@ -86,7 +86,7 @@ Month Number	 Name
 9			 October
 10			 November
 11			 December */
-string Calendar::getMonthName(int monthNumber)
+string Calendar::getMonthName(uint8_t monthNumber)
 {
 	string months[] = {"January", "February", "March",
 					   "April", "May", "June",
@@ -114,7 +114,7 @@ Month Number	 Name	 Number of Days
 11			 December 31
 
 */
-int Calendar::numberOfDays(int monthNumber, int year)
+uint8_t Calendar::numberOfDays(uint8_t monthNumber, int year)
 {
 	// January
 	if (monthNumber == 0)

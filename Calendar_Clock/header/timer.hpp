@@ -14,7 +14,7 @@ class Timer
 {
 private:
 	short minutes, seconds;
-	int totalTime;
+	uint8_t totalTime;
 
 public:
 	void timer_init(char option);

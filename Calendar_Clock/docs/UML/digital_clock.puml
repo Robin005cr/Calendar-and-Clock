@@ -1,9 +1,9 @@
 @startuml digital_clock.puml
 
 class DigitalClock {
-  - int timeHour
-  - int timeMin
-  - int timeSec
+  - uint8_t timeHour
+  - uint8_t timeMin
+  - uint8_t timeSec
   - string meridieum
 
   + void normalTime()

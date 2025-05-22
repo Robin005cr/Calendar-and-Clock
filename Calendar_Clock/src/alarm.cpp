@@ -16,7 +16,7 @@
 #include <ctime>
 #include"alarm.hpp"
 using namespace std;
-void Alarm::wait_until(int target_hour, int target_minute)
+void Alarm::wait_until(uint8_t target_hour, uint8_t target_minute)
 {
     while (true)
     {
